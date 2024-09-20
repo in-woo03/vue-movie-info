@@ -2,7 +2,7 @@
   <Navbar/>
   <Event :text="text[eventTextNum]"/>
   <SearchBar :data="data_temp" @searchMovie="searchMovie($event)"/>
-  
+   
   <p>
     <button @click="showAllMovie">전체보기</button>
   </p>
@@ -61,7 +61,7 @@ console.log(data);
           return movie.title.includes(title);
         })
       },
-      showAllMovie() {
+      showAllMovie() { //영화 전체보기
         this.data_temp = [...this.data];
       }
     },
